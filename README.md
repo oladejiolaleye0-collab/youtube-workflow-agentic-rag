@@ -1,2 +1,2 @@
 # youtube-workflow-agentic-rag
-Lightweight Agentic RAG (Retrieval Augmented Generation) service that turns YouTube tutorials into cached, queryable step‑by‑step workflows.
+This project ingests a YouTube tutorial, pulls its transcript, and uses an LLM to convert it into a clear, numbered step‑by‑step workflow. Each workflow is stored in a Qdrant semantic cache, so the system automatically grows with every request: new videos are processed once, then similar or repeated requests are served instantly from cache without you adding any data manually. The API exposes a simple /guide endpoint, send a YouTube URL (or task text) and get back a structured procedure you can read, reuse, or fork into your own flow.
